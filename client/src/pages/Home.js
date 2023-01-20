@@ -4,16 +4,24 @@
 // useGetUser();
 // const user = useSelector((state) => state.auth.user);
 
+import { Fragment } from 'react';
 import { BrowseCard, Header } from '../layouts';
 const Home = () => {
   return (
-    <div id='container-1x'>
-      <div className='flex col'>
-        <Header />
-        <div className='sp-3x '></div>
-        <BrowseCard />
+    <Fragment>
+      <div className='flex justify-end'>
+        <a href='./media' className=' col-blue pdlr-1x pdtb-1x wdt-1x bg-red '>
+          Uploads
+        </a>
       </div>
-    </div>
+      <div id='container-1x'>
+        <div className='flex col'>
+          <Header />
+          <div className='sp-3x '></div>
+          <BrowseCard />
+        </div>
+      </div>
+    </Fragment>
   );
 };
 
