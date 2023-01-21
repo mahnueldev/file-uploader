@@ -1,0 +1,120 @@
+@import "modal.css";
+@import "theme.css";
+/* Flex */
+
+body {
+  font-family: 'Roboto';
+}
+
+p {
+  font-weight: var(--wgt300);
+}
+h1 {
+  font-weight: var(--wgt500);
+  letter-spacing: 2px;
+  font-size: 40px;
+}
+
+
+/* ***************** */
+.btn {
+  border: none;
+  font-size: 12px;
+  letter-spacing: 2px;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+.media-disp {
+  width: 10rem;
+}
+
+
+
+/* styles for tablet screens */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  #container-1x {
+    margin: 0 1rem;
+  }
+  #container-2x {
+    margin: 0 2rem;
+  }
+  #container-3x {
+    margin: 0 3rem;
+  }
+  #container-4x {
+    margin: 0 4rem;
+  }
+  /* Spacing */
+  .sp-1x {
+    margin: 4px 0;
+  }
+  .sp-2x {
+    margin: 8px 0;
+  }
+  .sp-3x {
+    margin: 11px 0;
+  }
+  .sp-4x {
+    margin: 14px 0;
+  }
+  /* Button */
+  .btn {
+    padding: 12px 15px;
+  }
+  /* *Width */
+  .wdt-1x {
+    width: 3rem;
+  }
+  .wdt-2x {
+    width: 6rem;
+  }
+  .wdt-3x {
+    width: 10rem;
+  }
+  .wdt-4x {
+    width: 16rem;
+  }
+  .wdt-5x {
+    width: 20rem;
+  }
+}
+/* styles for phone screens */
+@media only screen and (max-width: 479px) {
+  /* Container */
+  #container-1x {
+    margin: 0 0.5rem;
+  }
+  #container-2x {
+    margin: 0 1rem;
+  }
+  #container-3x {
+    margin: 0 1.5rem;
+  }
+  #container-4x {
+    margin: 0 2rem;
+  }
+  /* *Width */
+  .wdt-1x {
+    width: 3rem;
+  }
+  .wdt-2x {
+    width: 6rem;
+  }
+  .wdt-3x {
+    width: 10rem;
+  }
+  .wdt-4x {
+    width: 16rem;
+  }
+  .wdt-5x {
+    width: 20rem;
+  }
+  /* hEADING */
+  h1 {
+    letter-spacing: 2px;
+    font-size: 20px;
+  }
+}

@@ -1,7 +1,7 @@
 import media from '../svg/media.svg';
 const Header = () => {
   return (
-    <div className='flex col align-cent'>
+    <div className='flex coln align-cent'>
         <img src={media} alt="media" className='media-disp' />
       <h1>File Uploader</h1>
       

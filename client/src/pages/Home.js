@@ -9,13 +9,13 @@ import { BrowseCard, Header } from '../layouts';
 const Home = () => {
   return (
     <Fragment>
-      <div className='flex justify-end'>
-        <a href='./media' className=' col-blue pdlr-1x pdtb-1x wdt-1x bg-red '>
+      <div className='flex justify-end pdtb-1x'>
+        <a href='./media' className=' flex justify-cent col-white pdlr-1x pdtb-1x bg-red wdt-2x rad-5x '>
           Uploads
         </a>
       </div>
       <div id='container-1x'>
-        <div className='flex col'>
+        <div className='flex coln'>
           <Header />
           <div className='sp-3x '></div>
           <BrowseCard />

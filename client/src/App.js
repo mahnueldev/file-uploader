@@ -1,4 +1,4 @@
-import './app.css';
+import './css/App.css';
 import Home from './pages/Home';
 import Media from './pages/Media';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
