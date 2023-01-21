@@ -1,18 +1,22 @@
+import { UploadLayout } from "../layouts";
+import Cancel from "../svg/cancel";
 const UploadModal = ({ isOpen, setIsOpen }) => {
     return (
       <>
         {isOpen && (
           <div className={`modal ${isOpen ? 'open' : ''} `}>
             <div className='modal-content'>
+            <div className="flex justify-end wdt-1x">
+                <Cancel onClick={() => setIsOpen(false)} width='1rem' height='1rem'/>
+            </div>
               <div className='modal-header'>
-                <h2>Modal Title</h2>
+                <h2 className="col-gray"><span className="col-blue">Upload </span>Files</h2>
               </div>
               <div className='modal-body'>
-                <p>Modal content goes here</p>
+            
+                <UploadLayout />
               </div>
-              <div className='modal-footer'>
-                <button onClick={() => setIsOpen(false)}>Close</button>
-              </div>
+             
             </div>
           </div>
         )}

@@ -10,7 +10,7 @@ const Home = () => {
   return (
     <Fragment>
       <div className='flex justify-end pdtb-1x'>
-        <a href='./media' className=' flex justify-cent col-white pdlr-1x pdtb-1x bg-red wdt-2x rad-5x '>
+        <a href='./media' className=' flex justify-cent col-white pdlr-1x pdtb-1x bg-red wdt-3x rad-5x '>
           Uploads
         </a>
       </div>

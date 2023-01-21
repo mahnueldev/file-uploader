@@ -19,6 +19,12 @@
   --bdr-start: 2px 15px 2px 3px;
   --bdr-end: 2px 3px 2px 15px;
   --blur: blur(5px);
+  /* Radius */
+  --rad-1x: 10px;
+  --rad-2x: 20px;
+  --rad-3x: 30px;
+  --rad-4x: 40px;
+  --rad-5x: 50px;
 }
 
 a {
@@ -153,19 +159,41 @@ a {
 
 /* *Width */
 .wdt-1x {
-  width: 5rem;
+  width: 2rem;
 }
 .wdt-2x {
-  width: 10rem;
+  width: 5rem;
 }
 .wdt-3x {
-  width: 15rem;
+  width: 10rem;
 }
 .wdt-4x {
-  width: 20rem;
+  width: 15rem;
 }
 .wdt-5x {
+  width: 20rem;
+}
+.wdt-6x {
   width: 25rem;
+}
+/* *Height */
+.hgt-1x {
+  height: 2rem;
+}
+.hgt-2x {
+  height: 5rem;
+}
+.hgt-3x {
+  height: 10rem;
+}
+.hgt-4x {
+  height: 15rem;
+}
+.hgt-5x {
+  height: 20rem;
+}
+.hgt-6x {
+  height: 25rem;
 }
 /********** Color *************/
 
@@ -309,17 +337,17 @@ a {
 
 /* Border Radius */
 .rad-1x {
-  border-radius: 10px;
+  border-radius: var(--rad-1x);
 }
 .rad-2x {
-  border-radius: 20px;
+  border-radius: var(--rad-2x);
 }
 .rad-3x {
-  border-radius: 30px;
+  border-radius: var(--rad-3x);
 }
 .rad-4x {
-  border-radius: 40px;
+  border-radius: var(--rad-4x);
 }
 .rad-5x {
-  border-radius: 50px;
+  border-radius: var(--rad-5x);
 }

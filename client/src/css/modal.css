@@ -22,14 +22,16 @@
     background-color: white;
     padding: 20px;
     width: 80%;
-    max-width: 600px;
+    max-width: 60rem;
+    border-radius: var(--rad-2x);
   }
   
   /* Style the header, body, and footer */
   .modal-header {
-    padding: 10px 20px;
-    background-color: blue;
-    border-bottom: 1px solid #ccc;
+    padding: 5px 20px;
+    background-color: var(--white);
+   
+    
   }
   .modal-body {
     padding: 20px;

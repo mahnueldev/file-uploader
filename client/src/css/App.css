@@ -14,8 +14,20 @@ h1 {
   letter-spacing: 2px;
   font-size: 40px;
 }
-
-
+h2 {
+  font-weight: var(--wgt500);
+  letter-spacing: 2px;
+  font-size: 20px;
+}
+.wgt500{
+  font-weight: var(--wgt500);
+}
+.pointer{
+  cursor: pointer;
+}
+.grab{
+  cursor: grab;
+}
 /* ***************** */
 .btn {
   border: none;
@@ -66,18 +78,21 @@ h1 {
   }
   /* *Width */
   .wdt-1x {
-    width: 3rem;
+    width: 2rem;
   }
   .wdt-2x {
-    width: 6rem;
+    width: 3rem;
   }
   .wdt-3x {
-    width: 10rem;
+    width: 6rem;
   }
   .wdt-4x {
-    width: 16rem;
+    width: 10rem;
   }
   .wdt-5x {
+    width: 16rem;
+  }
+  .wdt-6x {
     width: 20rem;
   }
 }
@@ -98,18 +113,40 @@ h1 {
   }
   /* *Width */
   .wdt-1x {
-    width: 3rem;
+    width: 2rem;
   }
   .wdt-2x {
-    width: 6rem;
+    width: 3rem;
   }
   .wdt-3x {
-    width: 10rem;
+    width: 6rem;
   }
   .wdt-4x {
-    width: 16rem;
+    width: 10rem;
   }
   .wdt-5x {
+    width: 16rem;
+  }
+  .wdt-6x {
+    width: 20rem;
+  }
+  /* Height */
+  .hgt-1x {
+    width: 2rem;
+  }
+  .hgt-2x {
+    width: 3rem;
+  }
+  .hgt-3x {
+    width: 6rem;
+  }
+  .hgt-4x {
+    width: 10rem;
+  }
+  .hgt-5x {
+    width: 16rem;
+  }
+  .hgt-6x {
     width: 20rem;
   }
   /* hEADING */
