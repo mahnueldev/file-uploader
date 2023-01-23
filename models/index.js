@@ -1,6 +1,4 @@
-'use strict';
-
-const { Sequelize, DataTypes } = require('sequelize');
+const { Sequelize } = require('sequelize');
 const env = process.env.NODE_ENV || 'development';
 const config = require(__dirname + '/../config/config.json')[env];
 const db = {};
@@ -29,7 +27,6 @@ connDB
 db.sequelize = connDB;
 db.Sequelize = Sequelize;
 
-db.User = require('./User.js')(connDB, DataTypes);
-
+db.File = require('./File.js')(connDB);
 
 module.exports = db;

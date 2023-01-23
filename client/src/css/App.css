@@ -28,6 +28,22 @@ h2 {
 .grab{
   cursor: grab;
 }
+/* Line height */
+.ln-hgt-1x{
+line-height: 1.2;
+}
+.ln-hgt-2x{
+line-height: 1.4;
+}
+.ln-hgt-3x{
+line-height: 1.6;
+}
+.ln-hgt-4x{
+line-height: 1.8;
+}
+.ln-hgt-5x{
+line-height: 2;
+}
 /* ***************** */
 .btn {
   border: none;
