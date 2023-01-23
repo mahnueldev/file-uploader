@@ -4,9 +4,10 @@ module.exports = function (connDB) {
   const File = connDB.define(
     'file',
     {
-      originalname: { type: Sequelize.STRING },
-      filename: { type: Sequelize.STRING },
-      mimetype: { type: Sequelize.STRING },
+      
+      name: { type: Sequelize.STRING },
+      format: { type: Sequelize.STRING },
+      url: { type: Sequelize.STRING }
     },
     {
       freezeTableName: true,
