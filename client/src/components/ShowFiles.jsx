@@ -1,9 +1,16 @@
-import React from 'react'
+import React from 'react';
 
-const ShowFiles = () => {
+const ShowFiles = ({files}) => {
+    
+   
   return (
-    <div>ShowFiles</div>
-  )
-}
+    <section>
+      <aside>
+        <h4>Files</h4>
+        <ul>{files}</ul>
+      </aside>
+    </section>
+  );
+};
 
-export default ShowFiles
+export default ShowFiles;

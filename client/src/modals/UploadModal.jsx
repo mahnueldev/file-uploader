@@ -1,6 +1,9 @@
 import { UploadLayout } from "../layouts";
+
 import Cancel from "../svg/cancel";
 const UploadModal = ({ isOpen, setIsOpen }) => {
+    
+ 
     return (
       <>
         {isOpen && (
@@ -16,7 +19,9 @@ const UploadModal = ({ isOpen, setIsOpen }) => {
             
                 <UploadLayout />
               </div>
-             
+             <div className="modal-footer">
+                <button className="col-button" type="submit">Send</button>
+             </div>
             </div>
           </div>
         )}

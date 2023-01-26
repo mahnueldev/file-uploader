@@ -1,4 +1,5 @@
 const fs = require('fs');
+const path = require('path');
 const express = require('express');
 const router = express.Router();
 const { multipleUpload, singleUpload } = require('../middleware/multerConn');
@@ -14,6 +15,7 @@ router.post('/multiple-upload', multipleUpload('files'), async (req, res) => {
 
     await File.bulkCreate(
       files.map((file) => ({
+        id: file.id,
         name: file.filename,
         format: file.mimetype,
         url: 'http://localhost:5050/uploads/' + file.filename,
@@ -30,9 +32,9 @@ router.post('/single-upload', singleUpload('file'), async (req, res) => {
     const file = req.file;
     // do something with the uploaded file, for example, save it to the database
     await File.create({
-        name: file.filename,
-        format: file.mimetype,
-        url: 'http://localhost:5050/uploads/' + file.filename,
+      name: file.filename,
+      format: file.mimetype,
+      url: 'http://localhost:5050/uploads/' + file.filename,
     });
     res.send('File uploaded successfully');
   } catch (err) {
@@ -51,17 +53,22 @@ router.get('/files', (req, res) => {
 });
 
 // Delete post by id
-router.delete('/files/:id', (req, res) => {
-  File.destroy({
-    where: {
-      id: req.params.id,
-    },
-  })
-    .then((file) => {
-      res.send(`File with id ${req.params.id} deleted successfully.`);
-    })
-    .catch((err) => {
-      res.status(500).send(err);
+router.delete('/files/:id', async (req, res) => {
+  try {
+    const file = await File.findByPk(req.params.id);
+    if (!file) {
+      return res.status(404).send('File not found');
+    }
+    await File.destroy({
+      where: {
+        id: req.params.id,
+      },
     });
+    fs.unlinkSync(path.join(__dirname, '../uploads', file.name));
+    res.send(`File with id ${req.params.id} deleted successfully.`);
+  } catch (err) {
+    res.status(500).send(err);
+  }
 });
+
 module.exports = router;

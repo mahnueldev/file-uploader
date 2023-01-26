@@ -1,7 +1,8 @@
 const express = require("express");
 const app = express();
-const multer = require('multer');
-const { multipleUpload, singleUpload } = require('./middleware/multerConn');
+
+const cors = require("cors");
+const corsOptions = require('./config/corsOptions');
 require('dotenv').config();
 const PORT = process.env.PORT || 5050;
 
@@ -9,6 +10,8 @@ const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use('/uploads', express.static('uploads'));
+// Cross Origin Resource Sharing
+app.use(cors(corsOptions));
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
