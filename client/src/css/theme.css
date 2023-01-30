@@ -31,7 +31,9 @@ a {
   all: unset;
   cursor: pointer;
 }
-
+.no-style{
+  all: unset;
+}
 #container-1x {
   margin: 0rem 5rem;
 }

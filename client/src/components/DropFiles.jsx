@@ -1,19 +1,12 @@
 import DropSvg from '../svg/drop.svg';
 
-const DropFiles = ({
-  files,
-  setFiles,
-  getRootProps,
-  getInputProps,
-  
-}) => {
-  
+const DropFiles = ({ files, setFiles, getRootProps, getInputProps }) => {
   return (
     <section
       {...getRootProps()}
       className='flex coln bdr-dash-1x rad-2x hgt-6x wdt-6x align-cent justify-cent grab'
     >
-      <input {...getInputProps()} />
+      <input {...getInputProps()} name="files"/>
       <div className='flex'>
         <img src={DropSvg} alt='media' className='media-disp' />
       </div>
