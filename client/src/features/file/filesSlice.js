@@ -57,7 +57,9 @@ const filesSlice = createSlice({
         state.isLoading = true;
       })
       .addCase(getFiles.fulfilled, (state, action) => {
-        state = [...state, ...action.payload];
+        state.files = [...state.files, ...action.payload];
+        state.isLoading = false;
+        state.error = null;
       })
       .addCase(getFiles.rejected, (state, action) => {
         // Handle error

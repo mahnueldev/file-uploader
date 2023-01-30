@@ -31,6 +31,9 @@ a {
   all: unset;
   cursor: pointer;
 }
+li{
+  all: unset; 
+}
 .no-style{
   all: unset;
 }
@@ -46,7 +49,16 @@ a {
 #container-4x {
   margin: 0 20rem;
 }
-
+.grid{
+  display:grid;
+  place-items: center;
+}
+.grid-col-4x{
+  grid-template-columns:repeat(4, 1fr);
+}
+.grid-rows-4x{
+  grid-template-rows:repeat(4, 1fr);
+}
 .flex {
   display: flex;
 }
@@ -56,7 +68,7 @@ a {
 .align-cent {
   align-items: center;
 }
-.justify-cent {
+.justify-cent  {
   justify-content: center;
 }
 /* ****** Space Between ******* */
@@ -75,6 +87,15 @@ a {
 }
 .full {
   width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+}
+.vw100 {
+  width: 100vh;
+
+}
+.vh100 {
+  height: 100vh;
 }
 /* Gap Spacing */
 .sg-1x {
@@ -93,6 +114,22 @@ a {
   gap: 5rem;
 }
 /* Spacing */
+.splr-1x {
+  margin: 0 5px;
+}
+.splr-2x {
+  margin: 0 10px;
+}
+.splr-3x {
+  margin: 0 15px;
+}
+.splr-4x {
+  margin: 0 20px;
+}
+.splr-5x {
+  margin: 0 25px;
+}
+
 .sp-1x {
   margin: 5px 0;
 }
